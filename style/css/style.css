@@ -685,10 +685,10 @@ header > div .btn-header > div button {
 }
 @media screen and (max-width: 550px) {
   #menu .img_block_menu > div > div:nth-child(2) h4 {
-    font-size: 1.8em;
+    font-size: 1.4em;
   }
   #menu .img_block_menu > div > div:nth-child(2) span {
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
 }
 #menu .number_block {
