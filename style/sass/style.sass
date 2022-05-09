@@ -297,13 +297,13 @@ header
                 width: 60%
                 height: 1px
                 background-color: red
-    .img_block
+    .img_block_menu
         display: grid
         max-width: 100vw
-        height: 400px
+        height: auto
         overflow: hidden
         grid-template-columns: repeat(5, 1fr)
-        grid-template-rows: repeat(2, 1fr)
+        grid-auto-rows: minmax(200px, auto)
         > div
             position: relative
             > div:nth-child(1)
@@ -334,12 +334,9 @@ header
                     font-family: "Lato-Bold"
                     text-transform: uppercase
         @media screen and (max-width: 980px)
-            height: auto
             grid-template-columns: repeat(3, 1fr)
-            grid-template-rows: repeat(4, 200px)
         @media screen and (max-width: 750px)
             grid-template-columns: repeat(2, 1fr)
-            grid-template-rows: repeat(5, 200px)
         @media screen and (max-width: 550px)
             > div > div:nth-child(2)
                 h4
@@ -479,8 +476,58 @@ footer
     p
         text-align: end
         text-transform: uppercase
-        span
+        a
             font-family: "Lato-Light"
             padding-left: 5px
     @media screen and  (max-width: 980px)
         padding: $white_padding_pages_small
+// loader
+#loader
+    background: none repeat scroll 0 0 #ffffff00
+    display: none
+    z-index: -999
+    &.active
+        background: none repeat scroll 0 0 #423b3b
+        height: 100%
+        width: 100%
+        position: fixed
+        display: inline-block
+        bottom: 0
+        left: 0
+        right: 0
+        top: 0
+        z-index: 999
+
+    .loaderDiv
+        animation: animate 1.5s linear infinite
+        clip: rect(0, 80px, 80px, 40px)
+        height: 80px
+        width: 80px
+        position: absolute
+        left: calc(50% - 40px)
+        top: calc(50% - 40px)
+        &::after
+            animation: animate2 1.5s ease-in-out infinite
+            clip: rect(0, 80px, 80px, 40px)
+            content: ''
+            border-radius: 50%
+            height: 80px
+            width: 80px
+            position: absolute
+@keyframes animate
+    0%
+        transform: rotate(0deg)
+
+    100%
+        transform: rotate(220deg)
+@keyframes animate2
+    0%
+        box-shadow: inset #b3dfd8 0 0 0 17px
+        transform: rotate(-140deg)
+
+    50%
+        box-shadow: inset #b3dfd8 0 0 0 2px
+
+    100%
+        box-shadow: inset #b3dfd8 0 0 0 17px
+        transform: rotate(140deg)

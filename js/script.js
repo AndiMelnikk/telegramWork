@@ -1,3 +1,11 @@
+// load site
+window.onload = function () {
+    loader.classList.add('active');
+    window.setTimeout(function () {
+        loader.classList.remove('active');
+    }, 1500);
+}
+
 // Number Run
 const time = 1000
 const fps = 30
@@ -196,3 +204,74 @@ for (let anchor of anchors) {
         ShowModal(null, false)
     })
 }
+
+
+// add menu 
+const menuList = [
+    {
+        title: 'Italian',
+        info: '327 recipes',
+        img: './img/Group_1.png'
+    },
+    {
+        title: 'India',
+        info: '856 recipes',
+        img: './img/Group_2.png'
+    }, {
+        title: 'FRENCH',
+        info: '27 recipes',
+        img: './img/Group_3.png'
+    }
+    , {
+        title: 'STEAKHOUSE',
+        info: '174 recipes',
+        img: './img/Group_4.png'
+    }, {
+        title: 'SEAFOOD',
+        info: '731 recipes',
+        img: './img/Group_5.png'
+    }, {
+        title: 'Sushi',
+        info: '227 recipes',
+        img: './img/Group_6.png'
+    }, {
+        title: 'Mexican',
+        info: '529 recipes',
+        img: './img/Group_7.png'
+    }, {
+        title: 'CHINESE',
+        info: '145 recipes',
+        img: './img/Group_8.png'
+    }, {
+        title: 'Pizza',
+        info: '327 recipes',
+        img: './img/Group_9.png'
+    }, {
+        title: 'American',
+        info: '1.437 recipes',
+        img: './img/Group_10.png'
+    }
+];
+(function () {
+    const block_menu = document.getElementsByClassName('img_block_menu')[0]
+    menuList.forEach(e => {
+        const divParent = document.createElement('div')
+        const divImg = document.createElement('div')
+        const divInfo = document.createElement('div')
+        const Img = document.createElement('img')
+        const Span = document.createElement('span')
+        const H4 = document.createElement('h4')
+
+        Img.setAttribute('src', e.img)
+        H4.textContent = e.title
+        Span.textContent = e.info
+
+        divImg.append(Img)
+        divInfo.append(Span)
+        divInfo.append(H4)
+        divParent.append(divImg)
+        divParent.append(divInfo)
+        block_menu.append(divParent)
+    })
+
+}())
