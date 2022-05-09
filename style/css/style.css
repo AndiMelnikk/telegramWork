@@ -323,6 +323,17 @@ header > div .btn-header > div button {
     padding: 0 7.5%;
   }
 }
+@media screen and (max-height: 980px) {
+  #home h1 {
+    font-size: 3em;
+  }
+  #home h3 {
+    font-size: 1em;
+  }
+  #home p {
+    font-size: 0.5em;
+  }
+}
 @media screen and (max-width: 600px) {
   #home {
     -ms-grid-rows: 1fr 50px 1fr;
@@ -738,10 +749,11 @@ header > div .btn-header > div button {
   display: flex;
 }
 #modal .window {
+  overflow-y: scroll;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 7fr;
-  grid-template-rows: 1fr 7fr;
+  -ms-grid-rows: min(70px) 7fr;
+  grid-template-rows: min(70px) 7fr;
   height: 90%;
   width: 40%;
   border-radius: 5px;
