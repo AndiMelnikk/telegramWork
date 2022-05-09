@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <div class="logo-header">
+                <img src="./img/logo.png" alt="logo">
+            </div>
+            <div class="btn-header">
+                <div>
+                    <button onclick="ShowModal('log_in')">log in</button>
+                    <button onclick="ShowModal('sung_in')">sung in</button>
+                    <button onclick="ShowModal('menu')">
+                        <img src="./img/menu.png" alt="menu">
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="modal">
+            <div class="window">
+                <div class="btn-back">
+                    <button onclick="ShowModal( null , false)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
+                            class="bi bi-chevron-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="all_content_modal">
+                    <div class="content form_LOG_IN">
+                        <div> <img src="./img/logo.png" alt="logo"></div>
+                        <h2>Log in</h2>
+                        <form action="form_LOG_IN" onsubmit="submitForm(event)">
+                            <input type="email" name="email" placeholder="Email">
+                            <span class="error_message_form_logIn">Введіть свою пошту</span>
+                            <input type="password" name="password" placeholder="password">
+                            <span class="error_message_form_logIn">
+                                Мінімальна довзина 8 символів, наявність літера велкого та малого регіструт ат цифри
+                            </span>
+                            <button>Log in</button>
+                        </form>
+                        <p>
+                            If you alredu have an sccount <br>
+                            <button class="tag_span" onclick="ShowModal('sung_in')">Sung in</button>
+                        </p>
+                    </div>
+                    <div class=" content form_SING_UP">
+                        <div> <img src="./img/logo.png" alt="logo"></div>
+                        <h2>Sing-up</h2>
+                        <form action="form_SING_UP" onsubmit="submitForm(event)">
+                            <input type="text" name="userName" placeholder="Username">
+                            <span class="error_message_form_singIn">Наприпустимі символи (лише анлійськи символи, цифри
+                                та "_")</span>
+                            <input type="email" name="email" placeholder="Email">
+                            <span class="error_message_form_singIn">Введіть свою пошту</span>
+                            <input type="password" name="password" placeholder="password">
+                            <span class="error_message_form_singIn">
+                                Мінімальна довзина 8 символів, наявність літера велкого та малого регіструт ат цифри
+                            </span>
+                            <button>Sing up</button>
+                        </form>
+                        <p>
+                            If you alredu have an sccount <br>
+                            <button class="tag_span" onclick="ShowModal('log_in')">Login in</button>
+                        </p>
+                    </div>
+                    <div class="content menu">
+                        <ul>
+                            <li>
+                                <a href="#home">home</a>
+                            </li>
+                            <li>
+                                <a href="#about">INTRODUCING THE FUDI APP</a>
+
+                            </li>
+                            <li>
+                                <a href="#response">RESPONSE</a>
+
+                            </li>
+                            <li>
+                                <a href="#menu">MENU</a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="home">
+            <div>
+                <h3>Find your Favorite</h3>
+            </div>
+            <div>
+                <h1>Recipes</h1>
+            </div>
+            <div>
+                <div>
+                    <button>
+                        get starter
+                    </button>
+                    <p>or send us your own recipes and <a href="#about">get rewarded</a>!</p>
+                </div>
+
+            </div>
+        </section>
+        <section id="about">
+            <div class="benefits">
+                <div>
+                    <div class="block-img"><img src="./img/icon_1.png" alt="photo">
+                    </div>
+                    <h3>get inspired</h3>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+                </div>
+                <div>
+                    <div class="block-img"><img src="./img/icon_2.png" alt="photo">
+                    </div>
+                    <h3>get rewarded</h3>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+                </div>
+                <div>
+                    <div class="block-img"><img src="./img/icon_3.png" alt="photo">
+                    </div>
+                    <h3>get social</h3>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+                </div>
+            </div>
+            <div class="post">
+                <div class="block-img"><img src="./img/iPhone_5s.png" alt="iPhone_5s"></div>
+                <div class="description">
+                    <h3>introducing the fudi app</h3>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+                    <div>
+                        <button>
+                            <img src="./img/AppStore.png" alt="AppStore">
+                        </button>
+                        <button>
+                            <img src="./img/GooglePlay.png" alt="GooglePlay">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="response">
+            <div class="slider">
+                <div class="allSlide">
+                    <div class="active">
+                        <div class="block-img"><img src="./img/response.png" alt="photo"></div>
+                        <h2>I am so happy because i found this recipe, and it just my life easier. Thank so much fot
+                            sharing!</h2>
+                        <span>- Michael Dawson, San Francisco, CA - </span>
+                    </div>
+                    <div>
+                        <div class="block-img"><img src="./img/response.png" alt="photo"></div>
+                        <h2>I am so happy because i found this recipe, and it just my life easier. Thank so much fot
+                            sharing! 2222222222</h2>
+                        <span>- Michael Dawson, San Francisco, CA - 22222</span>
+                    </div>
+                    <div>
+                        <div class="block-img"><img src="./img/response.png" alt="photo"></div>
+                        <h2>I am so happy because i found this recipe, and it just my life easier. Thank so much fot
+                            sharing! 3333</h2>
+                        <span>- Michael Dawson, San Francisco, CA - 33333</span>
+                    </div>
+                </div>
+                <div class="btnSlid">
+                </div>
+            </div>
+        </section>
+        <section id="menu">
+            <div class="tiitleBlcok">
+                <h3>browse by cuisines</h3>
+            </div>
+            <div class="img_block">
+                <div>
+                    <div><img src="./img/Group_1.png" alt="pasta"></div>
+                    <div>
+                        <span>327 recipes</span>
+                        <h4>Italian</h4>
+                    </div>
+                </div>
+                <div>
+                    <div><img src="./img/Group_2.png" alt="pasta"></div>
+                    <div>
+                        <span>856 recipes</span>
+                        <h4>Indian</h4>
+                    </div>
+                </div>
+                <div>
+                    <div><img src="./img/Group_3.png" alt="pasta"></div>
+                    <div>
+                        <span>27 recipes</span>
+                        <h4>French</h4>
+                    </div>
+                </div>
+                <div>
+                    <div><img src="./img/Group_4.png" alt="pasta"></div>
+                    <div>
+                        <span>174 recipes</span>
+                        <h4>Steakhouse</h4>
+                    </div>
+                </div>
+                <div>
+                    <div><img src="./img/Group_5.png" alt="pasta"></div>
+                    <div>
+                        <span>731 recipes</span>
+                        <h4>Seafood</h4>
+                    </div>
+                </div>
+                <div>
+                    <div><img src="./img/Group_6.png" alt="pasta"></div>
+                    <div>
+                        <span>227 recipes</span>
+                        <h4>Sushi</h4>
+                    </div>
+                </div>
+                <div>
+                    <div><img src="./img/Group_7.png" alt="pasta"></div>
+                    <div>
+                        <span>529 recipes</span>
+                        <h4>Mexican</h4>
+                    </div>
+                </div>
+                <div>
+                    <div><img src="./img/Group_8.png" alt="pasta"></div>
+                    <div>
+                        <span>145 recipes</span>
+                        <h4>Chinese</h4>
+                    </div>
+                </div>
+                <div>
+                    <div><img src="./img/Group_9.png" alt="pasta"></div>
+                    <div>
+                        <span>327 recipes</span>
+                        <h4>Pizza</h4>
+                    </div>
+                </div>
+                <div>
+                    <div><img src="./img/Group_10.png" alt="pasta"></div>
+                    <div>
+                        <span>1.437 recipes</span>
+                        <h4>American</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="number_block">
+                <div>
+                    <h3></h3>
+                    <span>Recipes Available</span>
+                </div>
+                <div>
+                    <h3></h3>
+                    <span>Recipes Users</span>
+                </div>
+                <div>
+                    <h3></h3>
+                    <span>Positive Reviews</span>
+                </div>
+                <div>
+                    <h3></h3>
+                    <span>Photo & Video</span>
+                </div>
+                <div>
+                    <h3></h3>
+                    <span>Spice and Herbs</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <span>@2014Fudi. All Rights Reserved</span>
+        </div>
+        <div>
+            <p>
+                Design by: <span>www.doctype.site</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>

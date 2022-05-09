@@ -1,0 +1,486 @@
+@import ./index
+@import ./fonts
+@import ./config
+
+// header
+header
+    width: 100%
+    position: absolute
+    top: 20px
+    left: 0
+    padding: $white_padding_pages
+    > div
+        display: grid
+        grid-template-columns: 1fr 1fr
+        .btn-header
+
+            > div
+                float: right
+                display: flex
+                width: 180px
+                height: 100%
+                align-items: center
+                justify-content: space-between
+                button
+                    font-family: "Lato-Bold"
+                    border: none
+                    background-color: #ffffff00
+                    color: white
+                    font-size: 0.9em
+                    text-transform: uppercase
+
+    @media screen and  (max-width: 980px)
+        padding: $white_padding_pages_small
+// home
+#home
+    display: grid
+    justify-content: center
+    grid-template-rows: 1fr 100px 1fr
+    width: 100%
+    padding: $white_padding_pages
+    height: 90vh
+    background-image: url(../../img/header.png)
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    >  div
+        display: flex
+        justify-content: center
+    div:nth-child(1)
+        align-items: flex-end
+        padding-bottom: 10px
+    div:nth-child(3)
+        div
+            display: flex
+            flex-direction: column
+            align-items: center
+            button
+                margin: 30px 0
+            a
+                color: white
+
+    h1
+        font-size: 6em
+        letter-spacing: 5px
+        color: #ffffff
+        font-family: "Lato-Bold"
+        filter: drop-shadow(-0.891px 0.454px 20px rgba(1,1,1,0.55))
+        height: auto
+        text-transform: uppercase
+    h3
+        font-size: 2.1em
+        letter-spacing: 2px
+        color: #ffffff
+        font-weight: bold
+        font-style: italic
+        font-family: "Times New Roman"
+        filter: drop-shadow(-0.891px 0.454px 20px rgba(1,1,1,0.55))
+    p
+        font-size: 0.9em
+        letter-spacing: 1px
+        color: #ffffff
+        font-family: "Lato-Bold"
+        filter: drop-shadow(-0.891px 0.454px 20px rgba(1,1,1,0.55))
+        text-transform: uppercase
+    button
+        width: 230px
+        height: 65px
+        border: 3px solid white
+        background-color: #ffffff00
+        font-size: 1.1em
+        letter-spacing: 0px
+        color: #ffffff
+        font-weight: 700
+        font-family: "Lato-Bold"
+        text-align: center
+        text-transform: uppercase
+    @media screen and  (max-width: 980px)
+        padding: $white_padding_pages_small
+    @media screen and (max-width: 600px)
+        grid-template-rows: 1fr 50px 1fr
+        h1
+            font-size: 4em
+        h3
+            font-size: 1.4em
+        p
+            font-size: 0.6em
+        button
+            widows: 150px
+            height: 55px
+            font-size: 0.8em
+// about
+#about
+    padding: $white_padding_pages
+    h3
+        display: inline-block
+        margin: 15px auto
+        font-size: 1.1em
+        text-transform: uppercase
+        font-family: "Lato-Light"
+        position: relative
+        &::after
+            position: absolute
+            content: ''
+            display: inline-block
+            width: 60%
+            bottom: -10px
+            left: 0%
+            height: 1px
+            background-color: red
+    p
+        text-align: justify
+        margin-top: 10px
+        font-family: "Lato-Light"
+        font-size: 0.9em
+        line-height: 18px
+    .benefits
+        margin: 100px 0
+        display: grid
+        width: 100%
+        grid-gap: 40px
+        grid-template-columns: repeat(3, 1fr)
+        > div
+            text-align: center
+        .block-img
+            display: flex
+            justify-content: center
+            align-items: center
+            margin: 0 auto
+            width: 100px
+            height: 100px
+            border-radius: 50%
+            border: 2px solid black
+            img
+                width: 60px
+                height: auto
+        h3
+            margin: 15px auto
+            &::after
+                width: 60%
+                left: 20%
+        @media screen and (max-width: 750px)
+            gap: 80px 0px
+            grid-template-columns: repeat(1, 1fr)
+    .post
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 10%
+        .block-img
+            position: relative
+            img
+                position: absolute
+                width: 100%
+                max-height: 100%
+                object-fit: contain
+                bottom: 0
+        .description
+            margin-top: 70px
+            p
+                margin: 10px 0 30px 0
+        button
+            border: none
+            background-color: #ffffff00
+        @media screen and (max-width: 750px)
+            grid-template-columns: repeat(1, 1fr)
+            grid-template-row: repeat(2, 1fr)
+            grid-gap: 0%
+            .description
+                grid-column: 1 / 2
+                grid-row: 1 / 3
+                margin-top: 0px
+            .block-img
+                img
+                    position: relative
+                    height: 90%
+                    bottom: -10%
+
+    @media screen and  (max-width: 980px)
+        padding: $white_padding_pages_small
+    @media screen and (max-width: 600px)
+        grid-template-rows: 1fr 50px 1fr
+        h3
+            font-size: 1.4em
+
+// response
+#response
+    display: flex
+    align-items: center
+    widows: 100%
+    height: 460px
+    overflow: hidden
+    background-image: url(../../img/Rectangle.png)
+    background-position: center
+    padding: 80px 0
+    .slider
+        height: 100%
+        width: 80%
+        margin: 0 auto
+    .allSlide
+        text-align: center
+        height: 90%
+        display: flex
+        align-items: center
+        > div.active
+            z-index: 1
+            display: block
+        > div
+            z-index: -1
+            top: 0
+            left: 0
+            display: none
+            width: 100%
+        .block-img
+            display: inline-block
+            border: 4px solid silver
+            border-radius: 50%
+            width: 100px
+            height: 100px
+            overflow: hidden
+            img
+                width: 100%
+                height: 100%
+                margin-bottom: -4px
+        h2
+            font-size: 2em
+            color: #ffffff
+            font-weight: 200
+            font-family: sans-serif
+            text-align: center
+            line-height: 1.1em
+            font-family: "Lato-Thin"
+            margin: 30px 0 20px 0
+        span
+            font-size: 1.1em
+            color: #ffffff
+            font-family: sans-serif
+            font-style: italic
+            font-family: "Lato-Thin"
+            text-align: center
+    .btnSlid
+        z-index: 2
+        margin-top: 20px
+        text-align: center
+        span
+            display: inline-block
+            width: 10px
+            height: 10px
+            border-radius: 50%
+            background-color: silver
+            margin: 0 2px
+            &.active
+                background-color: white
+    @media screen and  (max-width: 980px)
+        padding: $white_padding_pages_small
+        .allSlide
+            h2
+                font-size: 1.7em
+            span
+                font-size: 0.9em
+// menu
+#menu
+    margin: 60px 0 80px 0
+    .tiitleBlcok
+        text-align: center
+        padding: $white_padding_pages
+        h3
+            display: inline-block
+            margin: 15px auto
+            text-align: center
+            font-size: 1.1em
+            text-transform: uppercase
+            font-family: "Lato-Light"
+            position: relative
+            line-height: 10px
+            &::after
+                content: ''
+                display: inline-block
+                width: 60%
+                height: 1px
+                background-color: red
+    .img_block
+        display: grid
+        max-width: 100vw
+        height: 400px
+        overflow: hidden
+        grid-template-columns: repeat(5, 1fr)
+        grid-template-rows: repeat(2, 1fr)
+        > div
+            position: relative
+            > div:nth-child(1)
+                width: 100%
+                height: 100%
+            img
+                position: absolute
+                object-fit: cover
+                width: 100%
+                height: 100%
+
+            > div:nth-child(2)
+                color: white
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                position: absolute
+                span
+                    font-family: "Lato-Light"
+                    font-style: italic
+                h4
+                    font-size: 2em
+                    font-family: "Lato-Bold"
+                    text-transform: uppercase
+        @media screen and (max-width: 980px)
+            height: auto
+            grid-template-columns: repeat(3, 1fr)
+            grid-template-rows: repeat(4, 200px)
+        @media screen and (max-width: 750px)
+            grid-template-columns: repeat(2, 1fr)
+            grid-template-rows: repeat(5, 200px)
+        @media screen and (max-width: 550px)
+            > div > div:nth-child(2)
+                h4
+                    font-size: 1.8em
+                span
+                    font-size: 0.8em
+
+    .number_block
+        margin-top: 50px
+        padding: $white_padding_pages
+        display: grid
+        grid-template-columns: repeat(5, 1fr)
+        text-align: center
+        h3
+            text-align: center
+            font-size: 2em
+            font-family: "Lato-Light"
+        span
+            font-family: "Lato-Thin"
+        @media screen and  (max-width: 980px)
+            padding: $white_padding_pages_small
+        @media screen and (max-width: 750px)
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 40px 10px
+            > div:nth-child(5)
+                grid-column: 1 / 3
+                grid-row: 3 / 4
+// modal
+#modal
+    position: fixed
+    display: none
+    justify-content: center
+    align-items: center
+    width: 100vw
+    height: 100vh
+    background-color: #000000aa
+    z-index: 3
+    &.active
+        display: flex
+    .window
+        display: grid
+        grid-template-rows: 1fr 7fr
+        height: 90%
+        width: 40%
+        border-radius: 5px
+        background: linear-gradient(rgb(54, 27, 72), rgb(170, 140, 110))
+        text-transform: uppercase
+        font-family: "Lato-Light"
+        .btn-back
+            display: flex
+            align-items: center
+            padding-left: 15px
+            button
+                width: 40px
+                height: 40px
+                border: none
+                background-color: rgb(105, 75, 91)
+                border-radius: 50%
+                color: white
+        .all_content_modal
+            height: 100%
+        .content
+            padding: 30px 0
+            overflow: hidden
+            text-align: center
+            width: 80%
+            height: 100%
+            color: white
+            margin: 0 auto
+            display: none
+            &.active
+                display: block
+            > div
+                margin-bottom: 60px
+            h2
+                margin-bottom: 30px
+                font-size: 1.5em
+            form
+                margin-bottom: 30px
+            input, button
+                width: 100%
+                margin: 10px 0
+                border: 2px solid rgb(87, 53,83)
+                font-size: 1.1em
+                padding: 13px 10px
+                background-color: #ffffff2c
+                font-family: "Lato-Bold"
+                color: white
+            .error_message_form_logIn, .error_message_form_singIn
+                font-family: "Lato-Bold"
+                font-size: 0.7em
+                color: #beb6b6
+                font-style: italic
+                display: none
+                &.active
+                    display: inline
+
+            input::placeholder
+                color: white
+            button
+                background-color: rgb(117, 35, 69)
+                text-transform: uppercase
+                border-radius: 5px
+            .tag_span
+                margin: 0
+                padding: 0
+                border: none
+                display: inline
+                background: #ffffff00
+                font-family: 1em
+                font-family: "Lato-Light"
+                text-decoration: underline
+        .menu
+            ul
+                height: 100%
+            li
+                list-style: none
+                margin-bottom: 30px
+            a
+                text-decoration: none
+                color: white
+                font-family: "Lato-Bold"
+                text-transform: uppercase
+        @media screen and  (max-width: 980px)
+            padding: $white_padding_pages_small
+            height: 90%
+            width: 90%
+            min-width: 300px
+// footer
+footer
+    margin: 30px 0
+    width: 100vw
+    display: grid
+    padding: $white_padding_pages
+    grid-template-columns: repeat(2, 1fr)
+    font-family: "Lato-Thin"
+    p
+        text-align: end
+        text-transform: uppercase
+        span
+            font-family: "Lato-Light"
+            padding-left: 5px
+    @media screen and  (max-width: 980px)
+        padding: $white_padding_pages_small
