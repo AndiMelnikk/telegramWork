@@ -1,10 +1,10 @@
 // load site
-window.onload = function () {
-    loader.classList.add('active');
-    window.setTimeout(function () {
-        loader.classList.remove('active');
-    }, 1500);
-}
+// window.onload = function () {
+//     loader.classList.add('active');
+//     window.setTimeout(function () {
+//         loader.classList.remove('active');
+//     }, 1500);
+// }
 
 // Number Run
 const time = 1000
@@ -66,21 +66,46 @@ const allSlide = document.getElementsByClassName('allSlide')[0];
 }());
 btnSlid.addEventListener('click', clickSlider);
 
+// function clickSlider(e) {
+//     if (e.target.localName === "span") {
+//         for (let i = 0; i < Array.from(btnSlid.children).length; i++) {
+//             btnSlid.children[i].classList.remove('active')
+//             allSlide.children[i].classList.remove('active')
+//         }
+
+//         e.target.classList.add('active')
+
+//         Array.from(btnSlid.children).forEach((e, index) => {
+//             if (e.classList.contains('active'))
+//                 allSlide.children[index].classList.add("active")
+//         })
+//     }
+// };
+
+// slider new 
+
+allSlide.style.width = allSlide.children.length * 100 + "%"
+
 function clickSlider(e) {
+
     if (e.target.localName === "span") {
         for (let i = 0; i < Array.from(btnSlid.children).length; i++) {
             btnSlid.children[i].classList.remove('active')
-            allSlide.children[i].classList.remove('active')
+        }
+    }
+
+    e.target.classList.add('active')
+
+    Array.from(btnSlid.children).forEach((e, index) => {
+        if (e.classList.contains('active')) {
+            allSlide.children[index].classList.add("active")
+            allSlide.style.left = -1 * index * 100 + '%'
         }
 
-        e.target.classList.add('active')
+    })
+}
 
-        Array.from(btnSlid.children).forEach((e, index) => {
-            if (e.classList.contains('active'))
-                allSlide.children[index].classList.add("active")
-        })
-    }
-};
+console.log(allSlide.children)
 
 // Modal
 function ShowModal(type, visible = true) {

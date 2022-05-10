@@ -4,6 +4,9 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+*::-webkit-scrollbar {
+  width: 0px;
+}
 
 html,
 body,
@@ -234,8 +237,8 @@ header > div .btn-header > div button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-grid-rows: 1fr 100px 1fr;
-  grid-template-rows: 1fr 100px 1fr;
+  -ms-grid-rows: 1fr minmax(50px, auto) 1fr;
+  grid-template-rows: 1fr minmax(50px, auto) 1fr;
   width: 100%;
   padding: 0 13.5%;
   height: 90vh;
@@ -277,6 +280,7 @@ header > div .btn-header > div button {
   color: white;
 }
 #home h1 {
+  text-align: center;
   font-size: 6em;
   letter-spacing: 5px;
   color: #ffffff;
@@ -513,26 +517,38 @@ header > div .btn-header > div button {
   width: 80%;
   margin: 0 auto;
 }
-#response .allSlide {
-  text-align: center;
+#response .thisSlider {
   height: 90%;
+  width: 100%;
+  overflow: hidden;
+}
+#response .allSlide {
+  position: relative;
+  height: 100%;
+  width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  left: 0;
+}
+#response .allSlide > div {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-#response .allSlide > div.active {
-  z-index: 1;
-  display: block;
-}
-#response .allSlide > div {
-  z-index: -1;
-  top: 0;
-  left: 0;
-  display: none;
-  width: 100%;
 }
 #response .allSlide .block-img {
   display: inline-block;
