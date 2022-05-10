@@ -291,6 +291,7 @@ header > div .btn-header > div button {
   text-transform: uppercase;
 }
 #home h3 {
+  text-align: center;
   font-size: 2.1em;
   letter-spacing: 2px;
   color: #ffffff;
@@ -301,6 +302,7 @@ header > div .btn-header > div button {
           filter: drop-shadow(-0.891px 0.454px 20px rgba(1, 1, 1, 0.55));
 }
 #home p {
+  text-align: center;
   font-size: 0.9em;
   letter-spacing: 1px;
   color: #ffffff;
@@ -339,10 +341,6 @@ header > div .btn-header > div button {
   }
 }
 @media screen and (max-width: 600px) {
-  #home {
-    -ms-grid-rows: 1fr 50px 1fr;
-    grid-template-rows: 1fr 50px 1fr;
-  }
   #home h1 {
     font-size: 4em;
   }
@@ -679,10 +677,12 @@ header > div .btn-header > div button {
   position: absolute;
 }
 #menu .img_block_menu > div > div:nth-child(2) span {
+  text-align: center;
   font-family: "Lato-Light";
   font-style: italic;
 }
 #menu .img_block_menu > div > div:nth-child(2) h4 {
+  text-align: center;
   font-size: 2em;
   font-family: "Lato-Bold";
   text-transform: uppercase;
