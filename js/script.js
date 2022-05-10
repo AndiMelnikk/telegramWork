@@ -64,30 +64,12 @@ const allSlide = document.getElementsByClassName('allSlide')[0];
     }
     btnSlid.children[0].classList.add('active')
 }());
+
 btnSlid.addEventListener('click', clickSlider);
-
-// function clickSlider(e) {
-//     if (e.target.localName === "span") {
-//         for (let i = 0; i < Array.from(btnSlid.children).length; i++) {
-//             btnSlid.children[i].classList.remove('active')
-//             allSlide.children[i].classList.remove('active')
-//         }
-
-//         e.target.classList.add('active')
-
-//         Array.from(btnSlid.children).forEach((e, index) => {
-//             if (e.classList.contains('active'))
-//                 allSlide.children[index].classList.add("active")
-//         })
-//     }
-// };
-
-// slider new 
 
 allSlide.style.width = allSlide.children.length * 100 + "%"
 
 function clickSlider(e) {
-
     if (e.target.localName === "span") {
         for (let i = 0; i < Array.from(btnSlid.children).length; i++) {
             btnSlid.children[i].classList.remove('active')
@@ -104,8 +86,6 @@ function clickSlider(e) {
 
     })
 }
-
-console.log(allSlide.children)
 
 // Modal
 function ShowModal(type, visible = true) {
