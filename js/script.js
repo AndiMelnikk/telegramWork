@@ -1,10 +1,10 @@
 // load site
-// window.onload = function () {
-//     loader.classList.add('active');
-//     window.setTimeout(function () {
-//         loader.classList.remove('active');
-//     }, 1500);
-// }
+window.onload = function () {
+    loader.classList.add('active');
+    window.setTimeout(function () {
+        loader.classList.remove('active');
+    }, 1500);
+}
 
 // Number Run
 const time = 1000
