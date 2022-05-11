@@ -1,10 +1,10 @@
 // load site
-window.onload = function () {
-    loader.classList.add('active');
-    window.setTimeout(function () {
-        loader.classList.remove('active');
-    }, 1500);
-}
+// window.onload = function () {
+//     loader.classList.add('active');
+//     window.setTimeout(function () {
+//         loader.classList.remove('active');
+//     }, 1500);
+// }
 
 // Number Run
 const time = 1000
@@ -83,9 +83,28 @@ function clickSlider(e) {
             allSlide.children[index].classList.add("active")
             allSlide.style.left = -1 * index * 100 + '%'
         }
-
     })
 }
+
+setInterval(() => {
+    for (let i = 0; i < btnSlid.children.length; i++) {
+        if (btnSlid.children[i].classList.contains('active')) {
+            btnSlid.children[i].classList.remove('active')
+            if (i + 1 < btnSlid.children.length) {
+                btnSlid.children[i + 1].classList.add('active')
+                allSlide.style.left = -1 * (i + 1) * 100 + '%'
+            }
+
+            else {
+                btnSlid.children[0].classList.add('active')
+                allSlide.style.left = '0%'
+            }
+
+            return
+        }
+    }
+}, 5000);
+
 
 // Modal
 function ShowModal(type, visible = true) {

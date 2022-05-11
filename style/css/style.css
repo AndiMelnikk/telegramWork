@@ -3,9 +3,14 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scrollbar-width: none;
+  overflow-x: hidden;
 }
 *::-webkit-scrollbar {
-  width: 0px;
+  display: none;
+}
+*::-moz-scrollbar {
+  display: none;
 }
 
 html,
