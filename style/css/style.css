@@ -910,6 +910,7 @@ footer p {
 footer p a {
   font-family: "Lato-Light";
   padding-left: 5px;
+  color: black;
 }
 @media screen and (max-width: 980px) {
   footer {
@@ -919,9 +920,6 @@ footer p a {
 @media screen and (max-width: 750px) {
   footer {
     font-size: 0.7em;
-  }
-  footer a {
-    color: black;
   }
 }
 
