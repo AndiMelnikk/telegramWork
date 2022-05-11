@@ -186,6 +186,11 @@ button {
   cursor: pointer;
 }
 
+.container {
+  max-width: 2500px;
+  margin: 0 auto;
+}
+
 @font-face {
   font-family: "Lato-Bold";
   src: url(../../font/Lato/Lato-Bold.ttf);
