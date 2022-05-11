@@ -916,6 +916,14 @@ footer p a {
     padding: 0 7.5%;
   }
 }
+@media screen and (max-width: 750px) {
+  footer {
+    font-size: 0.7em;
+  }
+  footer a {
+    color: black;
+  }
+}
 
 #loader {
   background: none repeat scroll 0 0 #ffffff00;
